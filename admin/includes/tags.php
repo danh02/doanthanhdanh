@@ -36,10 +36,11 @@ class tag{
 
 		$row = $stmt->fetch(PDO::FETCH_ASSOC);
 		//Set Properties
+		if($row>0){
 		$this->n_tag_id = $row['n_tag_id'];
 		$this->n_blog_post_id = $row['n_blog_post_id'];
 		$this->v_tag = $row['v_tag'];
-		
+		}
 	}
 
 	//Create category
